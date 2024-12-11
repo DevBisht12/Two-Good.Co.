@@ -3,7 +3,8 @@ const lenis = new Lenis({
   duration:2,
 });
 
-// Use requestAnimationFrame to continuously update the scroll
+
+
 function raf(time) {
   lenis.raf(time);
   requestAnimationFrame(raf);
@@ -84,27 +85,69 @@ const heroTextAnimation = () => {
 
   const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
 
-  tl.from(".header", {
-    y: -100,
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.2,
-  })
-    .from(".hero_sec h2", {
-      y: 100,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.2,
-    })
-    .from(
-      ".hero_img img",
-      {
-        scale: 1.1,
+
+  window.addEventListener('load', () => {
+    const loadingPage = document.querySelector('#loading_page');
+  
+
+    setTimeout(() => {
+      gsap.to(loadingPage, {
         opacity: 0,
-        duration: 1.2,
-      },
-      "-=0.5"
-    );
+        duration: 1, 
+        onComplete: () => {
+          loadingPage.style.display = 'none'; 
+        }
+      });
+  
+
+      const tl = gsap.timeline();
+  
+      tl.from(".header", {
+        y: -100,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.2,
+      })
+        .from(".hero_sec h2", {
+          y: 100,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.2,
+        })
+        .from(
+          ".hero_img img",
+          {
+            scale: 1.1,
+            opacity: 0,
+            duration: 1.2,
+          },
+          "-=0.5"
+        );
+    }, 2000);
+  });
+  
+
+  // tl.from(".header", {
+  //   y: -100,
+  //   opacity: 0,
+  //   duration: 0.8,
+  //   stagger: 0.2,
+  // })
+  //   .from(".hero_sec h2", {
+  //     y: 100,
+  //     opacity: 0,
+  //     duration: 0.8,
+  //     stagger: 0.2,
+  //   })
+  //   .from(
+  //     ".hero_img img",
+  //     {
+  //       scale: 1.1,
+  //       opacity: 0,
+  //       duration: 1.2,
+  //     },
+  //     "-=0.5"
+  //   );
 };
 
 const emailSecPlaceholder=()=>{
