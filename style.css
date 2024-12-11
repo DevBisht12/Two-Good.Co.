@@ -704,11 +704,10 @@ body {
     }
     .page6{
         flex-direction: column-reverse;
-        width: 100%;
-        display: none;
+        width: 100vw;
     }
     .page6Right{
-        width: 96%;
+        /* width: 96%; */
     }
     .page6Left h2{
         font-size:6vw;
