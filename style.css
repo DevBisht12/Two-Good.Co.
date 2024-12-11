@@ -1,0 +1,756 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url(./font/Futura\ Bold.otf);
+
+@font-face {
+    font-family: 'FuturaBold';
+    src: url('./font/Futura Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Goilroy';
+}
+
+*::selection{
+    background-color: black;
+    color: white;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+#main{
+    position: relative;
+}
+.header{
+    display: flex;
+    width: 100%;
+    padding: 1vw;
+    justify-content:space-between;
+    align-items: flex-start;
+    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 888;
+}
+.header_expand{
+    background-color: black;
+    height: 0vh;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    display: flex;
+    overflow: hidden;
+    /* padding: 2vw; */
+    /* padding-top: 5vw; */
+
+}
+/* .header_a{
+    overflow: hidden;
+} */
+
+.header_expand_right{
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    padding: 2vw;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.header_close_sec{
+    width: 50%;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.close_sec_main{
+    margin: 2vw;
+    cursor: pointer;
+}
+.close_sec_main:hover{
+    opacity: 70%;
+}
+.close_sec_main span{
+    font-family: "Roboto", serif;
+    font-size: 1.2vw; 
+    margin-right: 1.5vw;
+    
+}
+.close_sec_main svg{
+    width: 3vw;
+    display: inline-block;
+}
+.header_expand h1{
+    color: white;
+    font-size: 4.5vw;
+    font-family: 'FuturaBold';
+    text-transform: uppercase;
+    line-height: 1;
+
+}
+
+.header h1{
+    font-family: 'FuturaBold';
+    text-transform: uppercase;
+    font-size: 1.7vw;
+    line-height: 0.9;
+    letter-spacing: -2px;
+}
+
+.headerleft{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    gap:3vw;
+    /* border: 2px solid; */
+    padding:  0.5vw 1vw;
+    border-radius: 50px;
+    background-color: white;
+    z-index: 10;
+}
+.action {
+    width: 1.2vw;
+}
+
+.hero_sec {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    padding: 1vw;
+    margin-top: 2.5vw;
+}
+
+.hero_sec h2 {
+    font-family: 'FuturaBold';
+    text-transform: uppercase;
+    font-size: 14vw;
+    font-weight: 700;
+    line-height: 15vw;
+    letter-spacing: -15px;
+}
+.hero_sec h1{
+    display: flex;
+    gap: 5vw;
+    overflow: hidden;
+}
+.hero_sec h2:nth-child(3){
+    display: inline;
+}
+
+.hero_img {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero_img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* PAGE 2 */
+
+.page2{
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 3vw;
+}
+
+.page2_main {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 1rem; 
+}
+
+.elem {
+    height: auto;
+    width: 100%; 
+    aspect-ratio: 3/4; 
+    margin: 0.5rem; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.product_info{
+    background-color:#fff6de ;
+    display: flex;
+    padding: 0.7vw;
+    gap:2vw;
+    align-items: center;
+    text-transform: uppercase;
+    border: 0.5px solid #fdf3d8;
+    border-radius: 50px;
+    width: 50%;
+}
+.product_info p ,strong{
+    font-family: "Roboto", serif;
+    font-size: 0.75vw;
+}
+.elem1{
+    background-image: url(https://cdn.sanity.io/images/w8f1ak3c/production/3639fc290272fe62d269e8750eff907b2664fc77-3000x5000.png/1.png?rect=1,0,2999,5000&w=640&h=1067&auto=format);
+}
+.elem2{
+
+    background-image: url(https://cdn.sanity.io/images/w8f1ak3c/production/9b0a45cc68406b9288b970064c64511ce937d911-5000x5000.png/Website%20Products%20-%20Alemais%202024.png?rect=1001,0,2999,5000&w=640&h=1067&fit=min&auto=format);
+}
+.elem3{
+    background-image: url(https://cdn.sanity.io/images/w8f1ak3c/production/06dac0cbccbec66e8c76afc0cc323e5241cc508b-3000x5000.png);
+}
+.elem2 .product_info{
+   
+    border: 0.5px solid #85a9dc;
+    background-color: #8aaad6;
+}
+.elem3 .product_info{
+   
+    background-color: white;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+
+
+
+}
+.elem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page2_header{
+    display: flex;
+    justify-content: space-between;
+    margin:  0 1vw;
+    border-bottom: 1px solid ;
+}
+.page2_header p{
+    font-family: 'roboto';
+    text-transform: uppercase;
+    font-size: 0.7vw;
+}
+
+
+.page3{
+    min-height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+    padding: 0 2vw ;
+}
+.page3 h2{
+    font-family: 'FuturaBold';
+    text-transform: uppercase;
+    font-size: 3.917vw;
+    line-height: 1;
+    
+}
+.page3Right {
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 12vw;
+}
+.page3Right p{
+    font-family: 'roboto';
+    font-size: 1.1vw;
+}
+.page4{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 4vw;
+    margin-top: 8vw;
+    margin-bottom: 4vw;
+}
+.product{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+.product p ,span{
+    font-family: "Roboto", serif;
+    font-size: 0.95vw;
+    text-transform: uppercase;
+}
+.product img{
+    width: 35vw;
+    height: auto;
+}
+.page5{
+    height: 70vh;
+    text-align: center;
+    /* border-top: 1px solid; */
+    display: flex;
+    gap: 1vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.page5 h2{
+    font-size: 3.8vw;
+    font-family: 'FuturaBold';
+    text-transform: uppercase;
+}
+.page5 button{
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    padding: 1vw;
+    border-radius: 50px;
+    font-family: "Roboto", serif;
+    font-size: 1vw;
+    width: 20%;
+}
+.page5 p{
+    font-family: 'roboto';
+    font-size: 1vw;
+    margin-top: 1vw;
+}
+.page6{
+    display: flex;
+    justify-content: space-between;
+    margin:  0 2vw;
+    overflow: hidden;
+}
+.page6Left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+
+}
+.page6Left h2{
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-family: 'FuturaBold';
+}
+.page6Left p{
+    font-size: 1.2vw;
+    font-family: "Roboto", serif;
+    width: 65%;
+}
+.page6Right{
+    display: flex;
+    width: 50%;
+    gap: 1vw;
+    /* border: 2px solid red; */
+}
+.page6Right img{
+    width: 45%;
+    filter: grayscale(100%) brightness(0.8) contrast(1.2);
+}
+.emailSec{
+    border-bottom: 1px solid #c2c1c1 ;
+    margin: 6vw 1.5vw;
+    position: relative;
+
+}
+.emailSec input{
+    width: 100%;
+    padding: 1vw;
+    font-size: 2.2vw;
+    text-transform: uppercase;
+    font-family: 'FuturaBold';
+    outline: none;
+}
+
+.emailSec input::placeholder{
+    font-size: 2.2vw;
+    text-transform: uppercase;
+    font-family: 'FuturaBold';
+    color: black;
+}
+.clickMeCurcer{
+    position: absolute; 
+    background-color: gray;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    /* display: flex !important; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    z-index: -1;
+    left: 0;
+    transform: translate(-50%, -50%)!important;
+    display: none;
+}
+.clickMeCurcer h3{
+    text-transform: uppercase;
+    font-family: 'FuturaBold';
+
+}
+.main_footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw;
+    align-items: center;
+    margin-top: 3vw;
+}
+.footerCenter h1{
+    font-size: 3.5vw;
+    font-family: 'FuturaBold';
+    text-transform: uppercase;
+    line-height: 1;
+    
+}
+.footerLeft h6 ,p{
+    font-family: "Roboto", serif;
+    padding: 0.2vw 0;
+}
+.footerRight h6 ,p{
+    font-family: "Roboto", serif;
+    padding: 0.2vw 0;
+}
+.footerRight{
+    text-align: end;
+    font-family: "Roboto", serif;
+}
+.sub-footer{
+    border-top: 1px solid #bebebe;
+    padding: 0.9vw;
+    text-align: center;
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+}
+.sub-footer span{
+    font-size: 0.9vw;
+}
+/* HERO SECTION RESPONSIVE */
+
+
+
+@media(max-width:900px){
+    .header h1 {
+        font-size: 3vw;
+    }
+    .headerleft{
+        padding: 1vw 3vw;
+        width: 15%;
+        justify-content: space-around;
+    }
+    .header_expand h1{
+        font-size: 8vw;
+    }
+    .close_sec_main{
+        display: flex;
+    }
+    .close_sec_main span{
+        font-size: 2.2vw;
+    }
+    .action {
+        width: 2.5vw;
+    }
+    .hero_sec{
+        min-height: 80vh;
+        margin-top: 7vw;
+    }
+    .hero_img{
+        height: 45vh;
+    }
+    .hero_sec h2{
+        letter-spacing: -5px;
+    }
+    .page2_header{
+        margin: 2vw 1vw;
+    }
+    .page2_header p {
+        font-size: 1.5vw;
+    }
+    .page2{
+        min-height: fit-content;
+        margin-bottom: 6vw;
+    }
+    .page3{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+    }
+    .page3 h2{
+        line-height: 1.2;
+    }
+    .page3 h2 br{
+        display: none;
+    }
+    .page3Right{
+        width: 100%;
+        gap: 2vw;
+        text-align: center;
+        margin: 0;
+        align-items: center;
+    }
+    .page3Right p{
+        width: 80%;
+        font-size: 1.9vw;
+        line-height: 1.8;
+    }
+    .page4{
+        position: relative;
+    right: 2vw;
+}
+    .product p, span{
+        font-size: 1vw;
+    }
+    .page5{
+        height: fit-content;
+        margin:  10vw 0;
+    }
+    .page5 button{
+        font-size: 1.5vw;
+        width: 30%;
+        padding: 1.2vw;
+    }
+    .page5 p{
+        font-size: 1.8vw;
+    }
+    .page6{
+        flex-direction: column-reverse;
+        width: 100vw;
+        overflow: hidden;
+    }
+    .page6Right{
+        width: 98%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    .page6Left{
+        width: 100%;
+        margin-top: 4vw;
+    }
+    .page6Right img{
+        width: 100%;
+    }
+    .page6Left h2{
+        font-size: 3.5vw;
+    }
+    .page6Left p{
+        font-size: 1.9vw;
+        width: 70%;
+    }
+    .emailSec input {
+        font-size: 3.6vw;
+    }
+    
+    .emailSec input::placeholder {
+        font-size: 3.6vw;
+    }
+    .sub-footer{
+        padding: 1.5vw;
+    }
+    .sub-footer span {
+        font-size: 1.5vw;
+    }
+}
+
+
+@media(max-width:460px){
+    .header{
+        padding: 3vw;
+    }
+    .headerleft {
+        gap: 10vw;
+        padding: 2vw 6vw;
+    }
+    .header h1{
+        font-size: 7vw !important;
+    }
+    .action {
+        width: 4.5vw;
+    }
+    .header_expand_right{
+        width: 90%;
+    }
+    .header_expand h1{
+        font-size: 11vw;
+    }
+    .header_close_sec{
+        width: fit-content;
+    }
+    .close_sec_main{
+        display: flex;
+        margin: 3vw;
+    }
+    .close_sec_main span{
+        font-size: 5vw;
+    }
+    .close_sec_main svg {
+        width: 7vw;
+    }
+    .hero_sec{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2vw 3vw;
+        min-height: 85vh;
+    }
+    .hero_img{
+        height: 30vh;
+        width: 100%;
+    }
+    .hero_sec h2{
+        font-size: 15vw;
+        letter-spacing: -3px;
+    }
+    /* ------- */
+    .page2{
+        width: 100%;
+        min-height: 100vh;
+    }
+    .page2_header{
+        padding: 0 2vw ;
+    }
+    .page2_main{
+        flex-wrap: wrap; 
+    }
+    .page2_header p{
+        font-size: 3.5vw;
+    }
+    .product_info {
+        width: 80%;
+        padding: 1.5vw;
+        justify-content: space-around;
+    }
+    .product_info p, strong{
+        font-size: 3.5vw;
+    }
+    .page3{
+        flex-direction: column;
+        width: 100%;
+        /* border: 2px solid red; */
+        text-align: center;
+        min-height: 45vh;
+        justify-content: center;
+        align-items: center;
+        gap: 5vw;
+
+    }
+    .page3 h2{
+        font-size: 6vw;
+        width: 80%;
+        line-height: 1.2;
+    }
+    .page3Right{
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        gap: 4vw;
+        margin: 0;
+    }
+    .page3Right p{
+        font-size: 3.4vw;
+        width: 90%;
+
+    }
+    .product p, span {
+        font-family: Roboto, serif;
+        font-size: 3vw;
+        width: 90%;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .page4 {
+        right: 0vw;
+    }
+    .page5{
+        height: 50vh;
+        gap: 5vw;
+        margin: 0;
+    }
+    .page5 h2 {
+        font-size: 7vw;
+        line-height: 1.2;
+    }
+    .page5 button {
+        padding: 4vw;
+        font-size: 3vw;
+        width: 70%;
+    }
+    .page5 p {
+        font-size: 4vw;
+        margin-top: 4vw;
+    }
+    .page6{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .page6Right{
+        width: 100%;
+    }
+    .page6Left h2{
+        font-size:6vw;
+        margin-top: 2vw;
+    }
+    .page6Left{
+        width: 95%;
+        padding: 2vw;
+    }
+    .page6Left p {
+        font-size: 3.5vw;
+        width: 100%;
+    }
+    .emailSec input {
+        height: 12vh;
+        font-size: 5vw;
+        white-space: normal;
+        word-wrap: break-word; 
+    }
+    
+    .emailSec input::placeholder {
+        font-size: 5vw;
+        white-space: normal;
+        word-wrap: break-word;
+    }
+    .emailSec{
+        margin-top: 0;
+    }
+    .main_footer{
+        margin: 0;
+        padding: 0 3vw;
+        padding-bottom: 3vw;
+    }
+    .sub-footer {
+        padding: 4vw 1.4vw;
+        justify-content: space-between;
+    }
+    .footerCenter{
+        display: none;
+    }
+    .footerRight {
+        text-align: start;
+    }
+    .sub-footer span {
+        font-size: 3vw;
+    }
+}
