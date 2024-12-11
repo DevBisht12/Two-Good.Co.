@@ -705,6 +705,7 @@ body {
     .page6{
         flex-direction: column-reverse;
         width: 100%;
+        display: none;
     }
     .page6Right{
         width: 96%;
