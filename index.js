@@ -40,7 +40,6 @@ const headerAnimation = () => {
   menu.addEventListener('click', () => {
     if (!isExpanded) {
       isExpanded = true;
-
       // Expand the header
       gsap.to(expandHeader, {
         height: '102vh',
@@ -126,28 +125,6 @@ const heroTextAnimation = () => {
     }, 2000);
   });
   
-
-  // tl.from(".header", {
-  //   y: -100,
-  //   opacity: 0,
-  //   duration: 0.8,
-  //   stagger: 0.2,
-  // })
-  //   .from(".hero_sec h2", {
-  //     y: 100,
-  //     opacity: 0,
-  //     duration: 0.8,
-  //     stagger: 0.2,
-  //   })
-  //   .from(
-  //     ".hero_img img",
-  //     {
-  //       scale: 1.1,
-  //       opacity: 0,
-  //       duration: 1.2,
-  //     },
-  //     "-=0.5"
-  //   );
 };
 
 const emailSecPlaceholder=()=>{
