@@ -137,6 +137,8 @@ const emailSecPlaceholder=()=>{
   });
 }
 
+
+
 const emailSecCurser = () => {
   const emailSec = document.querySelector('.emailSec');
   const clickMeCurcerMain = document.querySelector('.clickMeCurcer');
@@ -177,6 +179,19 @@ const emailSecCurser = () => {
     });
   });
 };
+gsap.from('.page2_main .elem', {
+  opacity: 0,
+  // scale: 1.1,
+  x:10,
+  duration: 1,
+  stagger: 0.2, 
+  scrollTrigger: {
+    trigger: '.page2 .page2_main',
+    start: 'top center',
+    toggleActions: 'play none none none', 
+  }
+});
+
 
 headerAnimation()
 
